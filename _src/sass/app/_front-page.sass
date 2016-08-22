@@ -1,0 +1,386 @@
+//=================================
+// FRONT PAGE
+//=================================
+
+//---------------------------------
+// Contest bar
+//---------------------------------
+.not-live
+
+  .clock-bar-wrapper
+    margin-top: 0
+
+  .clock
+    display: none
+
+.clock-bar-wrapper
+  margin-top: -73px
+
+  &.not-live
+    margin-top: 0
+
+    .clock
+      display: none
+
+  +mq(medium)
+    position: fixed
+    bottom: 0
+    z-index: 15
+    width: 100%
+
+.unstick
+
+  .clock-bar-wrapper
+    position: relative
+
+  .food-content
+    padding-top: 15px !important
+
+.contest-bar
+  background: setcolor(green, light)
+  color: #fff
+  padding: 14px 10px 14px 10px
+
+  +mq(medium)
+    height: 66px
+
+  +mq(large)
+    padding: 14px 0 14px 0
+
+  .contest-bar-inner
+    margin: 0 auto
+    max-width: 300px
+    +cf
+
+    +mq(small)
+      max-width: 580px
+
+    +mq(medium)
+      max-width: 768px
+
+    +mq(large)
+      max-width: 860px
+
+//---------------------------------
+// Show us your fridge
+//---------------------------------
+.show-us-your-fridge
+  width: 100%
+  text-transform: uppercase
+  border: 1px solid #fff
+  padding: 12px 8px 6px 0
+  font-size: 16px
+  position: relative
+  margin: 0 auto 10px auto
+  text-align: right
+  font-family: $walbaum
+
+  +mq(small)
+    width: 296px
+
+  +mq(medium)
+    float: left
+    width: 39%
+    margin: 0
+
+  +mq(large)
+    width: 34.5%
+
+  .squiggle
+    width: 38px
+    display: inline-block
+    position: absolute
+    top: 12px
+    left: 7px
+
+  svg
+    width: 100%
+
+  .top-part
+    width: 241px
+    display: block
+    position: absolute
+    white-space: nowrap
+    padding-right: 10px
+    padding-left: 3px
+    top: -6px
+    left: 12px
+    font-size: 10px
+    background: setcolor(green, light)
+    font-family: $montserrat
+
+  .pointing-arrow
+    width: 32px
+    background: setcolor(green, light)
+    position: absolute
+    right: -32px
+    top: 50%
+    transform: translateY(-50%)
+    display: none
+
+    +mq(medium)
+      display: block
+
+//---------------------------------
+// Contest form
+//---------------------------------
+.contest-form
+  width: 100%
+  +cf
+
+  +mq(small)
+    float: left
+    width: 80%
+
+  +mq(medium)
+    padding: 0 0 0 40px
+    width: 41%
+    clear: none
+    margin: 0
+    text-align: right
+
+  +mq(large)
+    width: 50.5%
+    padding: 0 0 0 46px
+
+  label
+    @extend %visually-hidden
+
+  input
+    border: none
+    font-size: 14px
+    color: setcolor(gray)
+    border: 1px solid #fff
+    padding: 9px 12px
+    transition: all $timing-fast ease-out
+    width: 65%
+    margin-bottom: 6px
+    border-radius: 4px
+    float: left
+
+    +mq(small)
+      width: 76%
+
+    +mq(medium)
+      margin-bottom: 0
+      width: 73%
+
+    &:focus
+      border-color: setcolor(green)
+
+    &.error
+      border-color: darken(setcolor(red), 3%)
+      background-color: rgba(lighten(setcolor(red), 10%), 0.5)
+      color: #fff
+
+      &::-webkit-input-placeholder
+         color: #fff
+
+      &:-moz-placeholder
+         color: #fff;
+
+      &::-moz-placeholder
+         color: #fff;
+
+      &:-ms-input-placeholder
+         color: #fff;
+
+  button
+    +button
+    width: 100%
+    padding: 10px 0 11px 0
+
+  .button-wrapper
+    width: 32.5%
+    float: left
+    margin-left: 2.5%
+    text-align: center
+
+    +mq(small)
+      width: 20.5%
+
+    +mq(medium)
+      width: 24.5%
+
+  .is-loading
+    padding-top: 5px
+
+    .button-wrapper
+      padding-top: 6px
+
+    svg
+      display: inline-block
+
+    button
+      display: none
+
+.loading-icon
+  width: 26px
+  height: 26px
+  display: none
+  animation: spin 750ms linear 0
+  animation-iteration-count: infinite
+
+.submission-success
+  color: #fff
+  text-align: center
+  font-size: 14px
+
+  +mq(medium)
+    padding-top: 8px
+
+//---------------------------------
+// Rules
+//---------------------------------
+.chance-to-win
+  width: 100%
+  text-align: center
+  text-transform: uppercase
+  font-size: 13px
+  line-height: 1.3em
+  position: relative
+  top: 4px
+
+  +mq(small)
+    text-align: left
+    width: 20%
+    float: left
+    padding-left: 2%
+
+  +mq(medium)
+    padding-left: 16px
+    width: 16%
+
+  +mq(large)
+    width: 15%
+
+  svg
+    width: 18px
+    height: 18px
+    display: inline-block
+    position: relative
+    top: -2px
+    margin-left: 4px
+
+    +mq(small)
+      margin-left: 0
+      display: block
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: transform $timing-fast cubic-bezier(0.103, 0.389, 0.307, 0.966)
+
+  path
+    transition: fill $timing-fast ease
+    fill: setcolor(green)
+
+  circle
+    transition: stroke $timing-fast ease
+    stroke: setcolor(green)
+
+  a
+    text-transform: none
+    display: block
+    font-size: 12px
+    color: setcolor(green)
+    line-height: 1.1em
+
+    &:hover
+      color: darken(setcolor(green), 5%)
+
+      path
+        fill: darken(setcolor(green), 5%)
+
+      circle
+        stroke: darken(setcolor(green), 5%)
+
+      +mq(small)
+        svg
+          transform: translate(5px, -50%)
+
+    span
+
+      +mq(small)
+        display: block
+
+//---------------------------------
+// Middle section of the front page
+//---------------------------------
+.food-content
+  background-image: url(assets/images/slate.jpg)
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  padding-bottom: 270px
+  padding-top: 15px
+
+  &.no-archive
+    padding-bottom: 0
+
+.section-icon
+  width: 20px
+  display: block
+  margin: 0 auto
+
+.section-heading
+  color: #fff
+  text-transform: uppercase
+  text-align: center
+  font-size: 12px
+  padding-bottom: rem(24px)
+
+  .top
+    display: inline-block
+    padding: 4px 0
+
+  .bottom
+    display: block
+    color: #fff
+    font-family: $walbaum
+    font-size: 35px
+
+  .rule
+    width: 60px
+    height: 2px
+    background: #fff
+    margin: 0 auto
+
+
+//---------------------------------
+// Up Scroller
+//---------------------------------
+.scroll-to-top
+  width: rem(48px)
+  background: setcolor(green)
+  border-top-left-radius: 4px
+  border-bottom-left-radius: 4px
+  position: fixed
+  bottom: 100px
+  right: 0
+  z-index: z('announce')
+  text-align: center
+  padding-top: 9px
+  padding-bottom: 7px
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3)
+  cursor: pointer
+  transition: all $timing-fast ease
+  opacity: 0
+  visibility: hidden
+  display: none
+
+  +mq(large)
+    display: block
+
+  &.show
+    opacity: 1
+    visibility: visible
+
+  &:hover svg
+    animation: upScroller 750ms ease 0
+    animation-iteration-count: infinite
+
+  svg
+    display: inline-block
+    width: rem(14px)
+    transition: all $timing-fast ease

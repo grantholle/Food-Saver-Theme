@@ -1,0 +1,275 @@
+//---------------------------------
+// Live feed container
+//---------------------------------
+.not-live
+
+  +mq(large)
+
+    .not-live-video-placeholder
+      display: block
+
+  .live-video
+    display: none
+
++mq(medium)
+
+  .live-video-container
+    padding-bottom: 66px
+    background: setcolor(green, light)
+
+  .unstick
+
+    .live-video-container
+      padding-bottom: 0
+
+.not-live-video-placeholder
+  width: 100%
+  display: none
+
+  +mq(large)
+    display: block
+
+.live-video-placeholder
+
+  +mq(large)
+    display: none
+
+  img
+    display: block
+    width: 100%
+
+.watch-now
+  +button
+  position: absolute
+  bottom: 130px
+  left: 50%
+  transform: translateX(-50%)
+  padding-left: 65px
+  padding-bottom: 6px
+  width: 220px
+
+  svg
+    width: 21px
+    height: 21px
+    display: inline-block
+    position: absolute
+    top: 50%
+    left: 22px
+    transform: translateY(-50%)
+
+  .live
+    display: block
+    font-size: 20px
+    font-family: $walbaum
+    line-height: 1.3em
+
+.live-video
+  width: 100%
+  position: relative
+  display: none
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 225px auto
+
+  +mq(large)
+    display: block
+
+  img, iframe
+    width: 100%
+    display: block
+    z-index: 1
+
+  .left-hover
+    position: absolute
+    width: 10%
+    height: 15%
+    bottom: 56%
+    left: 29%
+
+    .face-container
+      left: 38%
+      top: 40%
+
+  .center-hover
+    position: absolute
+    width: 10%
+    height: 15%
+    bottom: 56%
+    left: 69%
+
+    .face-container
+      left: 35%
+      top: 36%
+
+  .right-hover
+    position: absolute
+    width: 20%
+    height: 30%
+    bottom: 21%
+    right: 17%
+
+    .face-container
+      left: 39%
+      top: 40%
+
+  .bag-hover
+    position: absolute
+    width: 20%
+    height: 30%
+    bottom: 30%
+    right: 41%
+
+    .face-container
+      left: 44%
+      top: 40%
+
+    a:hover
+      color: #fff
+
+    .popover
+      width: rem(240px)
+
+    .popover-quote
+      font-size: rem(18px)
+
+    .svg-wrapper
+      width: 34px
+      height: 34px
+      background: #F2901C
+      border-radius: 50%
+      border: 3.5px solid #fff
+      position: relative
+
+      svg
+        width: 16px
+        height: 16px
+        fill: #fff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+.face-container
+  width: 34px
+  height: 34px
+  position: absolute
+
+//---------------------------------
+// Clock
+//---------------------------------
+.clock
+  background: rgba(0, 0, 0, 0.6)
+  text-align: center
+  padding: 10px 20px 14px 20px
+  width: 220px
+  height: 73px
+  margin: 0 auto
+  z-index: 2
+
+  div
+    display: inline-block
+
+  .label
+    color: setcolor(green, light)
+    display: block
+    font-family: $walbaum
+    font-size: 18px
+
+  .value
+    color: #fff
+    font-size: 31px
+
+  .divider
+    background: #fff
+    width: 1px
+    height: 40px
+    border-radius: 50%
+    position: relative
+    top: 5px
+    margin: 0 20px
+
+.flash
+  animation: clockFlash 2s ease 0
+  animation-iteration-count: infinite
+
+//---------------------------------
+// Popover styles
+//---------------------------------
+.hover-area
+  z-index: 10
+
+  &:hover
+
+    .popover
+      display: block
+
+.popover
+  position: absolute
+  top: -100%
+  width: rem(210px)
+  color: #fff
+  transform: translateY(-100%)
+  top: -8px
+  left: -109px
+  z-index: z('announce')
+  display: none
+  cursor: pointer
+
+  &.active
+    display: block
+
+  .live
+    text-align: center
+    text-transform: uppercase
+    position: relative
+    font-size: rem(12px)
+    margin-bottom: 10px
+
+.popover-inner
+  background: $light-green-transparent
+  padding: 8px 20px
+  border-top-right-radius: 4px
+  border-top-left-radius: 4px
+
+.mid-underline
+  background: #fff
+  width: 28px
+  height: 1px
+  display: inline-block
+  position: absolute
+  top: 6px
+
+  &.left
+    left: 0
+
+  &.right
+    right: 0
+
+.popover-quote
+  font-family: $walbaum
+  font-size: rem(20px)
+  line-height: 1.2em
+
+.popover-footer
+  background: setcolor(green)
+  line-height: 24px
+  text-align: center
+  text-transform: uppercase
+  font-size: rem(14px)
+  border-bottom-right-radius: 4px
+  border-bottom-left-radius: 4px
+
+  &:after
+    position: absolute
+    left: 126px
+    bottom: -10px
+    border: inset 5px
+    content: ""
+    display: block
+    height: 0
+    width: 0
+    border-color: setcolor(green) transparent transparent setcolor(green)
+    border-top-style: solid
+    border-left-style: solid
+
+

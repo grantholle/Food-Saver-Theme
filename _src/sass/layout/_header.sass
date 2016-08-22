@@ -1,0 +1,123 @@
+//=================================
+// HEADER
+//=================================
+header
+  height: 50px
+  z-index: z('header')
+  width: 100%
+  transition: all $timing-fast ease-out
+  background: #fff
+
+  +mq(large)
+    height: 60px
+    position: fixed
+    top: 0
+    visibility: hidden
+    opacity: 0
+    background: rgba(255, 255, 255, 0.9)
+
+  &.show
+    visibility: visible
+    opacity: 1
+
+.logo-wrapper
+
+  &.large
+    width: 475px
+    padding-top: 10px
+    display: none
+    padding-left: 20px
+
+    +mq(large)
+      display: block
+
+    +mq(xlarge)
+      padding-left: 0
+
+    img
+      width: 100%
+
+  &.small
+    text-align: center
+    padding-top: 15px
+
+    +mq(large)
+      display: none
+
+    img
+      width: 120px
+      margin-left: 10px
+
+.social-food-wants
+  z-index: z('header')
+  width: 100%
+  height: 60px
+
+  +mq(large)
+    position: fixed
+    top: 0
+    right: 0
+    width: rem(310px)
+
+  .social-icons
+    float: left
+    width: 30%
+    background: setcolor(green, light)
+    text-align: center
+    height: 60px
+    padding-top: 18px
+    display: none
+
+    +mq(large)
+      display: block
+
+    a
+      display: inline-block
+      width: 20px
+      position: relative
+
+      &:hover svg
+        fill: #fff
+
+      &:first-child
+        margin-right: 8px
+
+    svg
+      transition: fill $timing-fast ease-out
+      fill: setcolor(green)
+
+  .food-wants-heading
+    width: 100%
+    transition: background $timing-fast ease-out
+
+    +mq(large)
+      cursor: pointer
+      width: 70%
+      float: left
+      padding-right: 26px
+
+      &:hover svg g path
+          fill: setcolor(green, light)
+
+    .inner
+      display: inline-block
+      position: relative
+
+      +mq(large)
+        display: block
+
+    svg
+      width: 26px
+      height: 26px
+      position: absolute
+      top: 50%
+      right: -40px
+      transform: translateY(-50%)
+
+      +mq(large)
+        right: -6px
+
+      g
+        path
+          fill: #fff
+          transition: fill $timing-fast ease

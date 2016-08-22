@@ -1,0 +1,26 @@
+//=================================
+// COLORS
+//=================================
+
+// Color Map
+$colors: (black: #212223, white: #fff, gray: (base: #6D6E70, light: #ccc, dark: #5D5D5D), teal: (base: #139397, light: #33afb3, dark: #264d4e), green: (base: #006834, light: #69AF2F, dark: #4F8323), red: #EE4D23)
+
+$light-green-transparent: rgba(105, 175, 47, 0.9)
+
+// Returns a color with an optional tone from the map
+//
+// @param {string}  $color_name     The base name of the color
+// @param {tone}    ($tone|'base')  The tone of that color or 'base'
+//
+// @return {string} The matching color's value from the map
+@function setcolor($color_name, $tone: base)
+  @if map-has-key($colors, $color_name)
+    $map_color_name: map-get($colors, $color_name)
+    @if length($map_color_name) > 1
+      // This must be a map
+      @return map-get($map_color_name, $tone)
+    @else
+      // It's just a single color
+      @return $map_color_name
+  @else
+    @warn "Couldn't find a color named `#{$color_name}`."

@@ -1,0 +1,113 @@
+//---------------------------------
+// Coming soon section
+//---------------------------------
+.coming-soon
+  +cf
+  margin: 0 auto
+  overflow: hidden
+  max-width: $max-width
+
+.events
+  text-align: center
+  padding-bottom: rem(58px)
+  +cf
+  width: 100%
+  overflow: hidden
+  white-space: nowrap
+
+  article
+    margin: 0 6px
+    display: inline-block
+    width: 144px
+    vertical-align: top
+
+    color: #fff
+    text-transform: uppercase
+    height: 190px
+    white-space: normal
+    transition: transform 150ms cubic-bezier(0.103, 0.389, 0.307, 0.966)
+
+    +mq('max-medium')
+      transform: translateX(-76px)
+
+      &:first-child
+        margin-left: 50%
+
+      &.offset-1
+        transform: translateX(-234px)
+
+      &.offset-2
+        transform: translateX(-394px)
+
+      &.offset-3
+        transform: translateX(-554px)
+
+      &.offset-4
+        transform: translateX(-714px)
+
+      &.offset-5
+        transform: translateX(-874px)
+
+    &.event
+
+      .inner
+        border: 2px solid #fff
+
+      .item
+        color: setcolor(gray, dark)
+
+    &.red
+
+      .inner
+        background: rgba(238, 77, 35, 0.8)
+
+      .item
+        color: setcolor(red)
+
+    &.green
+
+      .inner
+        background: rgba(105, 175, 47, 0.8)
+
+      .item
+        color: setcolor(green, light)
+
+    .inner
+      height: 100%
+      position: relative
+
+      .inner-inner
+        width: 100%
+        padding: 10px 10px 14px 10px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        height: 100%
+
+  svg
+    width: 100%
+    display: block
+    margin: 8px auto
+
+  span
+    display: block
+
+  .how-long
+    font-size: 20px
+
+  .item
+    background: #fff
+    font-size: 13px
+    font-family: $walbaum
+    display: table
+    height: 70px
+    width: 100%
+
+    span
+      display: table-cell
+      vertical-align: middle
+      line-height: 1.5em
+
+  .will-it-last
+    font-size: 16px
+

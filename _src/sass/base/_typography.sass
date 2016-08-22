@@ -1,0 +1,121 @@
+//=================================
+// TYPOGRAPHY
+//=================================
+
+//---------------------------------
+// Pseudo
+//---------------------------------
+
+\::selection
+  background: #777
+  color: #fff
+  text-shadow: none
+
+//---------------------------------
+// General
+//---------------------------------
+
+html
+  font-size: $base-font-size
+
+  +mq(medium)
+    font-size: 14px
+
+body
+  font-size: $body-font-size
+  +font-smoothing
+  font-family: $montserrat
+  color: setcolor(black)
+  background: #fff
+
+a
+  color: setcolor(black)
+  text-decoration: none
+  transition: all $timing-fast ease-out
+  &:hover,
+  &:focus,
+  &:active
+    color: setcolor(gray)
+  &:focus
+    outline: none
+
+//---------------------------------
+// Headlines
+//---------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  line-height: 1
+  a
+    color: setcolor(black)
+
+.index-template-content
+  padding: rem(40px) rem(12px, false) rem(50px) rem(12px, false)
+  background: setcolor(green, light)
+  color: #fff
+
+  +mq('large')
+    padding-right: 0
+    padding-left: 0
+
+  h1, h2, h3, h4, h5, h6
+    font-family: $walbaum
+    margin-bottom: 0.4em
+
+  h1
+    font-size: rem(30px)
+
+  h2
+    font-size: rem(28px)
+
+  h3
+    font-size: rem(22px)
+
+  h4
+    font-size: rem(18px)
+
+  h5, h6
+    font-size: 1rem
+
+  a
+    color: #fff
+    text-decoration: underline
+
+    &:hover
+      color: setcolor(gray, light)
+
+
+
+//---------------------------------
+// Text Components
+//---------------------------------
+
+p,
+dl,
+address
+  font-size: 1rem
+
+p,
+li,
+dt,
+dd
+  font-weight: normal
+  font-style: normal
+
+li
+  line-height: 1
+
+p
+  margin-bottom: 10px
+  line-height: 1.3em
+
+//---------------------------------
+// Extend WYSIWYG Styles
+//---------------------------------
+
+.wysiwyg
+  @extend %wysiwyg

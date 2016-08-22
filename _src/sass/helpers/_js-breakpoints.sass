@@ -1,0 +1,58 @@
+//=================================
+// JAVASCRIPT BREAKPOINTS
+//=================================
+
+// Do no edit unless you know what you are doing.
+
+//---------------------------------
+// Media Query Indicator Mixin
+//---------------------------------
+
+$bp_string: ""
+
+=jsbp($mq-name, $mq-visible-name)
+  +mq($mq-name)
+    head
+      font-family: $mq-visible-name
+
+  $bp_string: appendString($bp_string, $mq-visible-name)
+
+@function appendString($string, $string-to-add)
+  @if $string == ""
+    @return $string-to-add
+  @else
+    @return #{$string},#{$string-to-add}
+
+//---------------------------------
+// Define the JS Breakpoints
+//---------------------------------
+
+// Phone Portrait Down +
++jsbp(max-tiny, "mq-tiny")
+
+// Phone Landscape +
++jsbp(mini, "mq-mini")
+
+// E-Readers +
++jsbp(small, "mq-small")
+
+// Tablets +
++jsbp(medium, "mq-medium")
+
+// Large Desktops + Tablet Landscape +
++jsbp(large, "mq-large")
+
+// Desktops Larger +
++jsbp(xlarge, "mq-xlarge")
+
+// Desktops Even Larger +
++jsbp(xxlarge, "mq-xxlarge")
+
+// Desktops Even Larger +
++jsbp(xxxlarge, "mq-xxxlarge")
+
+//---------------------------------
+// Set the Breakpoint Order
+//---------------------------------
+title
+  font-family: $bp_string

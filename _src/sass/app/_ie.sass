@@ -1,0 +1,78 @@
+//---------------------------------
+// IE Fixes - mostly for svg's
+//---------------------------------
+.internet-explorer
+
+  &.freeze
+    -ms-overflow-style: scrollbar
+
+  .how-long-did-they-last
+    background: setcolor(green, light)
+
+  .social-icons
+
+    svg
+      height: 20px
+
+    a:nth-child(3)
+        top: 0
+
+  .meet-the-contenders svg
+    height: 70px
+
+  .contest-form
+
+    svg
+      height: 18px
+      top: 7px
+
+    button
+      padding-top: 12px
+      padding-bottom: 12px
+
+  .section-icon svg
+    height: 19px
+
+  .inner svg
+    height: 15px
+
+  .show-us-your-fridge
+
+    .top-part
+      width: 250px
+
+    .pointing-arrow
+
+      svg
+        height: 12px
+
+  .scroll-to-top svg
+    height: 33px
+
+  .starter-kit-slideout
+    -ms-overflow-style: scrollbar
+
+  .video-overlay
+
+    .loading-icon, .play-icon
+      height: rem(60px)
+
+  .squiggle svg
+    height: 14px
+
+//---------------------------------
+// IE9 Fixes
+//---------------------------------
+.lt-ie10
+
+  .playback-container
+
+    &.loading
+
+      .loading-text
+        display: block
+
+  .events
+
+    .rule
+      border-radius: 0

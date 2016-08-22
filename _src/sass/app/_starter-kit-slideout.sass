@@ -1,0 +1,58 @@
+.starter-kit-slideout
+  max-width: 310px
+  position: fixed
+  top: 0
+  right: 0
+  height: 100%
+  z-index: 45
+  background: #fff
+  transform: translateX(100%)
+  transition: all $timing-fast cubic-bezier(0.103, 0.389, 0.307, 0.966)
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+  overflow-y: scroll
+
+  &.out
+    transform: translateX(0)
+
+  img
+    width: 100%
+
+  .wysiwyg-container
+    padding: 16px
+    color: setcolor(gray)
+
+    h2
+      font-size: 14px
+      color: setcolor(green, light)
+      text-align: center
+      font-weight: normal
+
+.food-wants-heading
+  background: setcolor(green)
+  color: #fff
+  position: relative
+  height: 60px
+  padding-top: 14px
+  text-align: center
+
+.close-icon
+  width: 20px
+  padding: 4px
+  fill: #fff
+  position: absolute
+  top: 50%
+  left: rem(16px)
+  transform: translateY(-50%)
+  cursor: pointer
+  z-index: 10
+
+.food-wants
+  display: block
+  text-transform: uppercase
+  font-size: 12px
+  margin-bottom: 4px
+
+.starter-kit
+  font-family: $walbaum
+  font-size: 18px
+  text-transform: uppercase

@@ -1,0 +1,202 @@
+//---------------------------------
+// Video overlay
+//---------------------------------
+.video-overlay
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: z('overlay')
+  background: #fff
+  transition: all $timing-fast linear
+  opacity: 0
+  visibility: hidden
+  color: setcolor(green, light)
+  overflow-y: scroll
+
+  +mq(large)
+    padding-top: 50px
+
+.video-overlay-inner
+  width: 100%
+  padding: 10px
+
+  .row
+    position: relative
+
+  .close-container
+    position: absolute
+    top: 0
+    right: 0
+    cursor: pointer
+    z-index: 5
+    font-size: 12px
+    padding-right: 24px
+    padding-top: 3px
+    color: setcolor(green)
+
+  .close-icon
+    transform: none
+    left: auto
+    top: 0
+    right: 0
+    fill: setcolor(green)
+    height: 20px
+
+  h2
+    text-transform: uppercase
+    font-size: 13px
+    text-align: center
+    font-weight: 400
+
+    &.save
+      font-weight: 400
+      font-size: 20px
+      text-align: left
+      margin-bottom: 16px
+      color: setcolor(green)
+
+    &.pack
+      font-family: $walbaum
+      font-size: 17
+      text-align: center
+
+.live-since
+  text-transform: uppercase
+  line-height: 2em
+
+.playback-container
+  width: 100%
+  margin-bottom: 20px
+
+  &.stopped
+
+    .play-icon
+      display: block
+
+  &.finished
+
+    .rewatch-icon
+      display: block
+
+  +mq(large)
+    width: 77%
+    float: left
+    margin-bottom: 0
+
+  .image-wrapper
+    width: 100%
+    position: relative
+
+  img, canvas
+    width: 100%
+    display: block
+
+  .day-label
+    position: absolute
+    bottom: 0
+    right: 0
+    background: rgba(0, 0, 0, 0.5)
+    font-size: rem(26px)
+    padding: rem(10px) rem(20px)
+    color: #fff
+    text-align: center
+
+    .label
+      font-family: $walbaum
+      font-size: rem(16px)
+      display: block
+      color: setcolor(green, light)
+
+  svg
+    width: rem(60px)
+    margin: auto
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 10
+    cursor: pointer
+    transition: transform 500ms ease
+    display: none
+
+    &.rewatch-icon:hover
+      transform: rotate(360deg)
+
+    &.play-icon:hover
+      transform: scale(1.5)
+
+    &.loading-icon
+      height: auto
+
+.loading-text
+  display: none
+  color: #fff
+  position: absolute
+  top: 58%
+  z-index: 10
+  text-align: center
+  width: 100%
+
+.starter-pack
+  width: 100%
+  margin: 0 auto
+  +cf
+
+  +mq(mini)
+    width: 80%
+
+  +mq(large)
+    width: 23%
+    float: left
+    padding-left: 20px
+    margin: 0
+
+  svg
+    width: 12px
+    height: 12px
+    margin: 0 auto 4px auto
+
+  .rule
+    background: setcolor(green, light)
+    height: 2px
+    border-radius: 1px
+    margin: 4px 0
+
+  h3
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    font-size: 12px
+    margin-bottom: 14px
+
+  ul
+    padding: 0
+    list-style-type: none
+    color: setcolor(black)
+    margin-bottom: 26px
+
+  li
+    margin: 6px 0
+    font-size: 13px
+
+  .fifty
+    width: 50%
+    float: left
+    padding: 0 10px
+
+    +mq(large)
+      float: none
+      width: 100%
+      padding: 0
+
+.overlay-open
+  overflow: hidden
+
+  .video-overlay
+    opacity: 1
+    visibility: visible

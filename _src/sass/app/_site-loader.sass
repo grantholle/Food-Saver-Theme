@@ -1,0 +1,43 @@
+.loading
+  overflow: hidden
+
+  .site-loader
+    +mq(large)
+      display: table
+
+.site-loader
+  position: fixed
+  visibility: visible
+  opacity: 1
+  width: 100%
+  height: 100%
+  z-index: z(overlay)
+  text-align: center
+  transition: all $timing-fast ease-out
+  background: setcolor(green, light)
+  background-size: 226px auto
+  display: none
+
+  .loader-wrapper
+    display: table-cell
+    vertical-align: middle
+
+  .fresh-fridge
+    width: rem(225px)
+
+  .loader
+    width: rem(225px)
+    height: rem(225px)
+    margin: 0 auto
+    margin-bottom: rem(18px)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 100%
+    background-color: setcolor(green, light)
+
+.finished-loading
+  overflow: visible
+
+  .site-loader
+    opacity: 0
+    visibility: hidden !important

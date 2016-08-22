@@ -1,0 +1,111 @@
+//---------------------------------
+// How long did they last
+//---------------------------------
+.how-long-did-they-last
+  position: relative
+  margin-top: -270px
+  background: $light-green-transparent
+  padding-top: rem(26px)
+  padding-bottom: rem(50px)
+  background: -moz-linear-gradient(top,  rgba(105,175,47,0.5) 0%, rgba(105,175,47,1) 270px, rgba(105,175,47,1) 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(105,175,47,0.5)), color-stop(270px,rgba(105,175,47,1)), color-stop(100%,rgba(105,175,47,1)))
+  background: -webkit-linear-gradient(top,  rgba(105,175,47,0.5) 0%,rgba(105,175,47,1) 270px,rgba(105,175,47,1) 100%)
+  background: -o-linear-gradient(top,  rgba(105,175,47,0.5) 0%,rgba(105,175,47,1) 270px,rgba(105,175,47,1) 100%)
+  background: -ms-linear-gradient(top,  rgba(105,175,47,0.5) 0%,rgba(105,175,47,1) 270px,rgba(105,175,47,1) 100%)
+  background: linear-gradient(to bottom,  rgba(105,175,47,0.5) 0%,rgba(105,175,47,1) 270px, rgba(105,175,47,1) 100%)
+
+.video-archive
+  +cf
+  padding: 0 5px
+
+  +mq(large)
+    margin: 0 rem(-10px)
+
+  .video
+    width: 50%
+    float: left
+    padding: 0 rem(5px, false)
+    margin-bottom: rem(18px, false)
+    color: #fff
+
+    &:nth-child(2n+1)
+      clear: left
+
+      +mq(large)
+        clear: none
+
+    +mq(large)
+      padding: 0 rem(10px)
+      margin-bottom: rem(46px)
+      width: 25%
+
+  .thumbnail-wrapper
+    margin-bottom: rem(16px)
+
+  .days-ago
+    font-size: 12px
+    display: block
+    text-transform: uppercase
+
+  .title
+    font-family: $walbaum
+    font-size: 13px
+
+    +mq(large)
+      font-size: 1rem
+
+  .meta
+    clear: both
+
+    +mq(large)
+      clear: none
+
+.box-wrapper-outer
+  +cf
+  margin-bottom: rem(10px, false)
+  text-align: center
+
+  +mq(large)
+    text-align: left
+    margin-bottom: 0
+    float: left
+
+.box-wrapper
+  display: inline-block
+
+  +mq(large)
+    display: block
+
+.box-label
+  float: left
+  border: 2px solid setcolor(green, dark)
+  margin-right: 7px
+  position: relative
+  text-align: center
+  font-family: $walbaum
+  width: rem(50px)
+
+  .label
+    text-transform: uppercase
+    display: inline-block
+    background: setcolor(green, light)
+    color: setcolor(green, dark)
+    font-size: 12px
+    position: absolute
+    bottom: -6px
+    left: 50%
+    padding: 0 4px
+    transform: translateX(-50%)
+    font-family: $montserrat
+
+  .day
+    display: block
+    font-size: 40px
+    margin-top: -3px
+    line-height: 0.7em
+
+  .days
+    font-size: 15px
+    display: block
+    margin-bottom: 5px
+
